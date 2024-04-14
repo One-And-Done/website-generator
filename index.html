@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Code Generator</title>
+    <title>Website Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Website Code Generator</h1>
+        <h1>Website Generator</h1>
     </header>
     <main>
         <div class="form-container">
-            <label for="website-title">Enter the website title:</label>
-            <input type="text" id="website-title" placeholder="Enter title...">
-            <label for="website-content">Enter your website content:</label>
-            <textarea id="website-content" rows="10" cols="50" placeholder="Enter HTML content here..."></textarea>
-            <label for="css-content">Enter CSS code:</label>
-            <textarea id="css-content" rows="5" cols="50" placeholder="Enter CSS code here..."></textarea>
-            <button id="generate-button">Generate Code</button>
-        </div>
-        <div class="preview-container">
-            <h2>Live Preview</h2>
-            <iframe id="preview-frame" frameborder="0"></iframe>
+            <label for="section-title">Section Title:</label>
+            <input type="text" id="section-title" placeholder="Enter section title...">
+            <label for="section-content">Section Content:</label>
+            <textarea id="section-content" rows="5" cols="50" placeholder="Enter section content..."></textarea>
+            <label for="section-image">Section Image URL:</label>
+            <input type="text" id="section-image" placeholder="Enter image URL...">
+            <button id="add-section-button">Add Section</button>
         </div>
         <div id="generated-code"></div>
     </main>
     <script src="script.js"></script>
 </body>
 </html>
+
