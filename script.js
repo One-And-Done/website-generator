@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updatePreview(code) {
         var previewDocument = previewFrame.contentDocument || previewFrame.contentWindow.document;
-        previewDocument.body.innerHTML = code;
+        previewDocument.open();
+        previewDocument.write(code);
+        previewDocument.close();
     }
 });
