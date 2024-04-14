@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     var generateButton = document.getElementById('generate-button');
     var generatedCodeContainer = document.getElementById('generated-code');
+    var previewFrame = document.getElementById('preview-frame');
 
     generateButton.addEventListener('click', function () {
         var websiteContent = document.getElementById('website-content').value.trim();
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var generatedCode = generateWebsiteCode(websiteContent);
         generatedCodeContainer.innerText = generatedCode;
+        updatePreview(generatedCode);
     });
 
     function generateWebsiteCode(content) {
@@ -23,5 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
         generatedCode += `\t${content}\n`;
         generatedCode += `</body>\n</html>`;
         return generatedCode;
+    }
+
+    function updatePreview(code) {
+        var previewDocument = previewFrame.contentDocument || previewFrame.contentWindow.document;
+        previewDocument.body.innerHTML = code;
     }
 });
